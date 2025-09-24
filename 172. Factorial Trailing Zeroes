@@ -1,0 +1,19 @@
+// User function Template for C++
+class Solution {
+  public:
+    int trailingZeroes(int n) {
+        // Write Your Code here
+        int count =0;
+        while(n>0)
+        {
+            n = n/5;
+            count +=n;
+        }
+        return count;
+    }
+};
+
+// to check the trailing factorials , we can finc by counting the no of 10's in it because 
+// each 10 contributes a trailing zero , i.e 120 = 12*10 , 67000 = 67 * 1000
+// 5*2 = 10 , so if a number contains 5 , it definitely has 2 i.e 5*4*3*2*1
+// so by the presence of 5 we can confirm the no of gtrailing zeroes in the factorial of number
